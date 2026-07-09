@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Revision Tool</title>
+  <meta name="description" content="A simple writing revision tool for clarity, tone, and flow." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Text Revision Tool</h1>
+      <p>Improve clarity, tone, and flow in your own writing.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="card notice">
+      <strong>Note:</strong> This tool is for revising your own writing. Review the final text yourself before submitting school work.
+    </section>
+
+    <section class="card">
+      <div class="top-row">
+        <label for="mode">Revision style</label>
+        <select id="mode">
+          <option value="natural">Natural style</option>
+          <option value="b2">Simple B2 English</option>
+          <option value="academic">Academic but clear</option>
+          <option value="email">Polite email</option>
+        </select>
+      </div>
+
+      <label for="input">Your draft</label>
+      <textarea id="input" maxlength="70000" placeholder="Paste your text here. This can handle long drafts around 5,000–10,000 words depending on your device."></textarea>
+
+      <div class="stats">
+        <span id="words">0 words</span>
+        <span id="chars">0 characters</span>
+      </div>
+
+      <div class="actions">
+        <button id="revise">Revise text</button>
+        <button id="swap" class="secondary">Use output as draft</button>
+        <button id="clear" class="danger">Clear</button>
+      </div>
+
+      <label for="output">Revised text</label>
+      <textarea id="output" readonly placeholder="Your revised text will appear here."></textarea>
+
+      <div class="actions">
+        <button id="copy" class="success">Copy output</button>
+        <button id="download" class="secondary">Download .txt</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made for personal writing revision.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
